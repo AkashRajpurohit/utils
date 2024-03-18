@@ -88,3 +88,33 @@ export const getReadTime = (content: string | null, wpm = 265): number => {
 
 	return Math.ceil(content.trim().split(/\s+/).length / wpm);
 };
+
+/**
+ * Checks if a date is before another date.
+ * @param date - The date to check.
+ * @param dateToCompare - The date to compare against.
+ * @returns true if the date is before the date to compare, otherwise false.
+ * @example isDateBefore('2020-01-01', '2021-01-01'); // true
+ * @example isDateBefore('2021-01-01', '2020-01-01'); // false
+ */
+export const isDateBefore = (
+	date: string | number | Date,
+	dateToCompare: string | number | Date,
+) => {
+	return new Date(date).getTime() < new Date(dateToCompare).getTime();
+};
+
+/**
+ * Checks if a date is after another date.
+ * @param date - The date to check.
+ * @param dateToCompare - The date to compare against.
+ * @returns true if the date is after the date to compare, otherwise false.
+ * @example isDateAfter('2021-01-01', '2020-01-01'); // true
+ * @example isDateAfter('2020-01-01', '2021-01-01'); // false
+ */
+export const isDateAfter = (
+	date: string | number | Date,
+	dateToCompare: string | number | Date,
+) => {
+	return !isDateBefore(date, dateToCompare);
+};

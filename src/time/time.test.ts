@@ -6,6 +6,8 @@ import {
 	formatDateTime,
 	formatTime,
 	getReadTime,
+	isDateBefore,
+	isDateAfter,
 } from './time';
 
 const timestamp = '2024-01-01 00:00:00.000';
@@ -52,5 +54,25 @@ describe('getReadTime', () => {
 
 	it('returns 0 for empty content', () => {
 		expect(getReadTime(null)).toEqual(0);
+	});
+});
+
+describe('isDateBefore', () => {
+	it('returns true if date is before date to compare', () => {
+		expect(isDateBefore('2020-01-01', '2021-01-01')).toBe(true);
+	});
+
+	it('returns false if date is not before date to compare', () => {
+		expect(isDateBefore('2021-01-01', '2020-01-01')).toBe(false);
+	});
+});
+
+describe('isDateAfter', () => {
+	it('returns true if date is after date to compare', () => {
+		expect(isDateAfter('2021-01-01', '2020-01-01')).toBe(true);
+	});
+
+	it('returns false if date is not after date to compare', () => {
+		expect(isDateAfter('2020-01-01', '2021-01-01')).toBe(false);
 	});
 });
