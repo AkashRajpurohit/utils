@@ -1,0 +1,112 @@
+{
+  "name": "@akashrajpurohit/ts-npm-template",
+  "version": "0.0.0-development",
+  "description": "A project template to bootstrap NPM package with Typescript",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AkashRajpurohit/ts-npm-template.git"
+  },
+  "homepage": "https://github.com/AkashRajpurohit/ts-npm-template",
+  "bugs": "https://github.com/AkashRajpurohit/ts-npm-template/issues",
+  "author": {
+    "name": "AkashRajpurohit",
+    "email": "me@akashrajpurohit.com",
+    "url": "https://akashrajpurohit.com"
+  },
+  "keywords": [
+    "typescript-template",
+    "npm-boilerplate",
+    "semantic-release-boilerplate"
+  ],
+  "license": "MIT",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./package.json": "./package.json"
+  },
+  "typesVersions": {
+    "*": {}
+  },
+  "files": [
+    "dist/**/*",
+    "LICENSE",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "format": "biome check --apply ./src",
+    "test": "vitest run",
+    "test:coverage": "vitest run --coverage",
+    "test:watch": "vitest watch",
+    "semantic-release": "semantic-release"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.6.1",
+    "@types/node": "^20.11.28",
+    "@vitest/coverage-v8": "^1.4.0",
+    "conventional-changelog-conventionalcommits": "^7.0.2",
+    "semantic-release": "^23.0.4",
+    "tsup": "^8.0.2",
+    "typescript": "^5.4.2",
+    "vitest": "^1.4.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "release": {
+    "branches": [
+      "main"
+    ],
+    "plugins": [
+      [
+        "@semantic-release/commit-analyzer",
+        {
+          "preset": "conventionalcommits",
+          "releaseRules": [
+            {
+              "type": "build",
+              "scope": "deps",
+              "release": "patch"
+            }
+          ]
+        }
+      ],
+      [
+        "@semantic-release/release-notes-generator",
+        {
+          "preset": "conventionalcommits",
+          "presetConfig": {
+            "types": [
+              {
+                "type": "feat",
+                "section": "Features"
+              },
+              {
+                "type": "fix",
+                "section": "Bug Fixes"
+              },
+              {
+                "type": "docs",
+                "section": "Documentation Changes"
+              },
+              {
+                "type": "build",
+                "section": "Dependencies and Other Build Updates",
+                "hidden": false
+              }
+            ]
+          }
+        }
+      ],
+      "@semantic-release/npm",
+      "@semantic-release/github"
+    ]
+  }
+}
