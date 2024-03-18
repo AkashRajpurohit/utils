@@ -11,7 +11,7 @@
  */
 export const formatDate = (
 	timestamp: string | number | Date,
-	dateStyle: Intl.DateTimeFormatOptions['timeStyle'] = 'medium',
+	dateStyle: Intl.DateTimeFormatOptions['dateStyle'] = 'medium',
 	locale = 'en-US',
 ) => {
 	return new Date(timestamp).toLocaleString(locale, { dateStyle });
@@ -42,7 +42,7 @@ export const formatTime = (
  */
 export const formatDateTime = (
 	timestamp: string | number | Date,
-	dateStyle: Intl.DateTimeFormatOptions['timeStyle'] = 'medium',
+	dateStyle: Intl.DateTimeFormatOptions['dateStyle'] = 'medium',
 	timeStyle: Intl.DateTimeFormatOptions['timeStyle'] = 'short',
 	locale = 'en-US',
 ) => {
@@ -61,7 +61,7 @@ export const formatDateTime = (
 export const formatDateOrTime = (
 	timestamp: string | number | Date,
 	type: 'date' | 'time' | 'datetime',
-	dateStyle: Intl.DateTimeFormatOptions['timeStyle'] = 'medium',
+	dateStyle: Intl.DateTimeFormatOptions['dateStyle'] = 'medium',
 	timeStyle: Intl.DateTimeFormatOptions['timeStyle'] = 'short',
 	locale = 'en-US',
 ) => {
