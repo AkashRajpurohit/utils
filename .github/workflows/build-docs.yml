@@ -54,7 +54,7 @@ jobs:
         if: always()
         uses: stefanzweifel/git-auto-commit-action@v5.0.0
         with:
-          commit_message: 'docs: :rocket: docs updated'
+          commit_message: 'docs: :rocket: docs updated [skip ci]'
           commit_user_name: FindingAkash
           commit_user_email: bot@akashrajpurohit.com
           commit_author: FindingAkash <bot@akashrajpurohit.com>
