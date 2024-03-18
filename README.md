@@ -33,6 +33,8 @@
 
 `@akashrajpurohit/utils` is a npm package for common utility functions that I use in my JavaScript and TypeScript projects.
 
+> Read more about the docs and usage on [akashrajpurohit.github.io/utils](https://akashrajpurohit.github.io/utils/).
+
 ## Installation 🚀
 
 ```bash
@@ -50,8 +52,6 @@ const date = new Date('2021-10-10T10:10:10.000Z');
 const formattedDate = formatDate(date, 'full');
 console.log(formattedDate); // Sunday, October 10, 2021
 ```
-
-Read more about the docs and usage on [akashrajpurohit.github/utils](https://akashrajpurohit.github/utils/).
 
 ## Bugs or Requests 🐛
 
