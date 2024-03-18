@@ -30,7 +30,7 @@ describe('convertNewlines', () => {
 });
 
 describe('getTruncatedContent', () => {
-	it('gets an excerpt from a string', () => {
+	it('gets the truncated string with ellipses from a string', () => {
 		expect(
 			getTruncatedContent('<p>Hello, <strong>world!</strong></p>', 10),
 		).toEqual('Hello, wor...');
@@ -41,6 +41,12 @@ describe('getTruncatedContent', () => {
 			),
 		).toEqual('Lorem ipsum dolor si...');
 		expect(getTruncatedContent('', 10)).toEqual(null);
+	});
+
+	it('gets the original string if the length is greater than the string length', () => {
+		expect(getTruncatedContent('Lorem ipsum dolor sit amet', 100)).toEqual(
+			'Lorem ipsum dolor sit amet',
+		);
 	});
 });
 
