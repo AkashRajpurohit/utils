@@ -1,22 +1,20 @@
 {
-  "name": "@akashrajpurohit/ts-npm-template",
+  "name": "@akashrajpurohit/utils",
   "version": "0.0.0-development",
-  "description": "A project template to bootstrap NPM package with Typescript",
+  "description": "Common utils for my projects",
   "repository": {
     "type": "git",
-    "url": "https://github.com/AkashRajpurohit/ts-npm-template.git"
+    "url": "https://github.com/AkashRajpurohit/utils.git"
   },
-  "homepage": "https://github.com/AkashRajpurohit/ts-npm-template",
-  "bugs": "https://github.com/AkashRajpurohit/ts-npm-template/issues",
+  "homepage": "https://github.com/AkashRajpurohit/utils",
+  "bugs": "https://github.com/AkashRajpurohit/utils/issues",
   "author": {
     "name": "AkashRajpurohit",
     "email": "me@akashrajpurohit.com",
     "url": "https://akashrajpurohit.com"
   },
   "keywords": [
-    "typescript-template",
-    "npm-boilerplate",
-    "semantic-release-boilerplate"
+    "utils"
   ],
   "license": "MIT",
   "main": "./dist/index.js",
