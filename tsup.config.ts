@@ -9,7 +9,7 @@ export default defineConfig(({ watch = false }) => ({
     index: 'src/index.ts',
   },
   external: [],
-  format: ['cjs', 'esm', 'iife'],
+  format: ['cjs', 'esm'],
   treeshake: isProduction,
   minify: isProduction,
   sourcemap: isProduction,
