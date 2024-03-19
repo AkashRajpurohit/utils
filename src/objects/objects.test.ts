@@ -2,9 +2,9 @@ import { describe, expect, it } from 'vitest';
 
 import {
 	isEmptyObject,
+	mapObjectValues,
 	sortObject,
 	sortObjectKeys,
-	mapObjectValues,
 } from './objects';
 
 describe('isEmptyObject', () => {

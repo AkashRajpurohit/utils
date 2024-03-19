@@ -2,11 +2,11 @@ import { describe, expect, it } from 'vitest';
 
 import {
 	addHttp,
+	addTrailingSlash,
 	isExternalLink,
+	isValidHTTPUrl,
 	removeHttp,
 	removeTrailingSlash,
-	addTrailingSlash,
-	isValidHTTPUrl,
 } from './http';
 
 describe('addHttp', () => {

@@ -2,9 +2,9 @@ import { describe, expect, it } from 'vitest';
 
 import {
 	convertNewlines,
+	getInitials,
 	getTruncatedContent,
 	stripHtml,
-	getInitials,
 } from './strings';
 
 describe('stripHtml', () => {
