@@ -1,6 +1,14 @@
 name: Release
 
-on: [push, workflow_dispatch]
+on:
+  push:
+    branches:
+      - main
+      - feat/*
+      - fix/*
+    paths-ignore:
+      - docs/**
+  workflow_dispatch:
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
