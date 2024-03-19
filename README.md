@@ -13,7 +13,7 @@
   </a>
   <img alt="Visitors count" src="https://visitor-badge.laobi.icu/badge?page_id=@akashrajpurohit~utils.visitor-badge&style=flat-square&color=0088cc">
   <a href="https://github.com/AkashRajpurohit/utils/actions">
-    <img alt="Coverage" src="https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/AkashRajpurohit/7336f237b82d9581c5f52405f87db531/raw/utils-coverage.json">
+    <img alt="Coverage" src="https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/AkashRajpurohit/8c8abd593f06bf9ea44d597b6208506c/raw/utils-coverage.json">
   </a>
   <a href="https://www.npmjs.com/package/@akashrajpurohit/utils">
     <img alt="NPM license" src="https://img.shields.io/npm/l/@akashrajpurohit/utils">
