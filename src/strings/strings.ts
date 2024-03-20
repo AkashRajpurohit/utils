@@ -72,3 +72,25 @@ export const getInitials = (value?: string | null, limit = 0) => {
 
 	return initials;
 };
+
+/**
+ * A utility function that slugify a string
+ * @param string - The string to slugify
+ * @param delimiter - The delimiter to use for the slug
+ * @returns The slugified string
+ * @example slugifyString('Hello world') // 'Hello-world'
+ * @example slugifyString('Hello world', '_') // 'Hello_world'
+ */
+export const slugifyString = (string: string, delimiter = '-') =>
+	string.split(' ').join(delimiter);
+
+/**
+ * A utility function that unslugify a string
+ * @param string - The string to unslugify
+ * @param delimiter - The delimiter to use for the slug
+ * @returns The unslugified string
+ * @example unSlugifyString('Hello-world') // 'Hello world'
+ * @example unSlugifyString('Hello_world', '_') // 'Hello world'
+ */
+export const unSlugifyString = (string: string, delimiter = '-') =>
+	string.split(delimiter).join(' ');

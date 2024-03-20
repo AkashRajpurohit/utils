@@ -5,6 +5,8 @@ import {
 	getInitials,
 	getTruncatedContent,
 	stripHtml,
+	slugifyString,
+	unSlugifyString,
 } from './strings';
 
 describe('stripHtml', () => {
@@ -93,5 +95,19 @@ describe('getInitials', () => {
 
 	it('should return the initials of two names with limit greater than the number of initials', () => {
 		expect(getInitials('John Doe', 5)).toEqual('JD');
+	});
+});
+
+describe('slugifyString', () => {
+	it('should slugify a string', () => {
+		expect(slugifyString('Hello world')).toEqual('Hello-world');
+		expect(slugifyString('Hello world', '_')).toEqual('Hello_world');
+	});
+});
+
+describe('unSlugifyString', () => {
+	it('should unslugify a string', () => {
+		expect(unSlugifyString('Hello-world')).toEqual('Hello world');
+		expect(unSlugifyString('Hello_world', '_')).toEqual('Hello world');
 	});
 });
