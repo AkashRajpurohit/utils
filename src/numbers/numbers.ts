@@ -23,3 +23,18 @@ export const parseNumericValue = (string: string) => {
 
 	return Number.isNaN(number) ? string : number;
 };
+
+/**
+ * A utility function that formats a number in specified locale
+ * @param number - The number to format
+ * @param locale - The locale to use for formatting
+ * @returns A string representation of the number in the specified locale
+ * @example formatNumber(123456.789, 'de-DE') // 123.456,789
+ * @example formatNumber(123456.789, 'en-US') // 123,456.789
+ */
+export const formatNumber = (
+	number: number,
+	locale: Intl.LocalesArgument = 'en-US',
+) => {
+	return number.toLocaleString(locale);
+};

@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 
-import { getRandomNumber, parseNumericValue } from './numbers';
+import { getRandomNumber, parseNumericValue, formatNumber } from './numbers';
 
 describe('parseNumericValue', () => {
 	it('parses a string into a number', () => {
@@ -19,5 +19,12 @@ describe('getRandomNumber', () => {
 		const randomNumber = getRandomNumber(min, max);
 		expect(randomNumber).toBeGreaterThanOrEqual(min);
 		expect(randomNumber).toBeLessThanOrEqual(max);
+	});
+});
+
+describe('formatNumber', () => {
+	it('should format a number in given locale', () => {
+		expect(formatNumber(123456.789, 'de-DE')).toBe('123.456,789');
+		expect(formatNumber(123456.789, 'en-US')).toBe('123,456.789');
 	});
 });
