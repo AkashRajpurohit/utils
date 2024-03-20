@@ -29,3 +29,23 @@ export const splitArrayChunks = <T>(array: T[], chunkSize: number) => {
 
 	return chunks;
 };
+
+/**
+ * Shuffle a given array
+ * @param array - The array to shuffle
+ * @returns A shuffled array
+ * @example shuffle([1, 2, 3, 4, 5]) // [3, 2, 5, 1, 4]
+ */
+export const shuffle = <T>(array: T[]) => {
+	const shuffledArray = [...array];
+
+	for (let i = 0; i < shuffledArray.length; i++) {
+		const randomIndex = Math.floor(Math.random() * shuffledArray.length);
+		[shuffledArray[i], shuffledArray[randomIndex]] = [
+			shuffledArray[randomIndex],
+			shuffledArray[i],
+		];
+	}
+
+	return shuffledArray;
+};

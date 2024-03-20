@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 
-import { range, splitArrayChunks } from './arrays';
+import { range, splitArrayChunks, shuffle } from './arrays';
 
 describe('range', () => {
 	it('generates an array of numbers', () => {
@@ -22,5 +22,16 @@ describe('splitArrayChunks', () => {
 			[6],
 		]);
 		expect(splitArrayChunks([], 3)).toEqual([]);
+	});
+});
+
+describe('shuffle', () => {
+	it('should shuffles an array', () => {
+		const array = [1, 2, 3, 4, 5];
+		const shuffledArray = shuffle(array);
+
+		expect(shuffledArray).not.toEqual(array);
+		expect(shuffledArray).toHaveLength(array.length);
+		expect(shuffledArray).toEqual(expect.arrayContaining(array));
 	});
 });
