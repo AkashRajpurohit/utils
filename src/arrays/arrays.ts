@@ -8,7 +8,7 @@
  * @param end - The ending number of the range.
  * @returns An array of numbers within the specified range.
  */
-export const range = (start: number, end: number) => {
+export const rangeArray = (start: number, end: number) => {
 	const length = end - start + 1;
 
 	return Array.from({ length }, (_, idx) => idx + start);
@@ -36,7 +36,7 @@ export const splitArrayChunks = <T>(array: T[], chunkSize: number) => {
  * @returns A shuffled array
  * @example shuffle([1, 2, 3, 4, 5]) // [3, 2, 5, 1, 4]
  */
-export const shuffle = <T>(array: T[]) => {
+export const shuffleArray = <T>(array: T[]) => {
 	const shuffledArray = [...array];
 
 	for (let i = 0; i < shuffledArray.length; i++) {

@@ -1,18 +1,18 @@
 import { describe, expect, it } from 'vitest';
 
 import {
-	range,
+	rangeArray,
 	splitArrayChunks,
-	shuffle,
+	shuffleArray,
 	arrayDifference,
 	arrayIntersection,
 } from './arrays';
 
-describe('range', () => {
+describe('rangeArray', () => {
 	it('generates an array of numbers', () => {
-		expect(range(1, 5)).toEqual([1, 2, 3, 4, 5]);
-		expect(range(0, 0)).toEqual([0]);
-		expect(range(-3, 3)).toEqual([-3, -2, -1, 0, 1, 2, 3]);
+		expect(rangeArray(1, 5)).toEqual([1, 2, 3, 4, 5]);
+		expect(rangeArray(0, 0)).toEqual([0]);
+		expect(rangeArray(-3, 3)).toEqual([-3, -2, -1, 0, 1, 2, 3]);
 	});
 });
 
@@ -31,10 +31,10 @@ describe('splitArrayChunks', () => {
 	});
 });
 
-describe('shuffle', () => {
+describe('shuffleArray', () => {
 	it('should shuffles an array', () => {
 		const array = [1, 2, 3, 4, 5];
-		const shuffledArray = shuffle(array);
+		const shuffledArray = shuffleArray(array);
 
 		expect(shuffledArray).not.toEqual(array);
 		expect(shuffledArray).toHaveLength(array.length);
