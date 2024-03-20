@@ -49,3 +49,27 @@ export const shuffle = <T>(array: T[]) => {
 
 	return shuffledArray;
 };
+
+/**
+ * A utility function that returns the difference between two arrays.
+ * @param array1 - The first array.
+ * @param array2 - The second array.
+ * @returns An array containing the difference between the two arrays.
+ * @example arrayDifference([1, 2, 3], [2, 3, 4]) // [1]
+ * @example arrayDifference([1, 2, 3], [4, 5, 6]) // [1, 2, 3]
+ */
+export const arrayDifference = <T>(array1: T[], array2: T[]) => {
+	return array1.filter((arr1) => !array2.includes(arr1));
+};
+
+/**
+ * A utility function that returns the intersection between two arrays.
+ * @param array1 - The first array.
+ * @param array2 - The second array.
+ * @returns An array containing the intersection between the two arrays.
+ * @example arrayIntersection([1, 2, 3], [2, 3, 4]) // [2, 3]
+ * @example arrayIntersection([1, 2, 3], [4, 5, 6]) // []
+ */
+export const arrayIntersection = <T>(array1: T[], array2: T[]) => {
+	return array1.filter((arr1) => array2.includes(arr1));
+};

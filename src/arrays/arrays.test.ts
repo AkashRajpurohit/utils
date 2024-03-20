@@ -1,6 +1,12 @@
 import { describe, expect, it } from 'vitest';
 
-import { range, splitArrayChunks, shuffle } from './arrays';
+import {
+	range,
+	splitArrayChunks,
+	shuffle,
+	arrayDifference,
+	arrayIntersection,
+} from './arrays';
 
 describe('range', () => {
 	it('generates an array of numbers', () => {
@@ -33,5 +39,19 @@ describe('shuffle', () => {
 		expect(shuffledArray).not.toEqual(array);
 		expect(shuffledArray).toHaveLength(array.length);
 		expect(shuffledArray).toEqual(expect.arrayContaining(array));
+	});
+});
+
+describe('arrayDifference', () => {
+	it('should return the difference between two arrays', () => {
+		expect(arrayDifference([1, 2, 3], [2, 3, 4])).toEqual([1]);
+		expect(arrayDifference([1, 2, 3], [4, 5, 6])).toEqual([1, 2, 3]);
+	});
+});
+
+describe('arrayIntersection', () => {
+	it('should return the intersection between two arrays', () => {
+		expect(arrayIntersection([1, 2, 3], [2, 3, 4])).toEqual([2, 3]);
+		expect(arrayIntersection([1, 2, 3], [4, 5, 6])).toEqual([]);
 	});
 });
