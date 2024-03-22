@@ -94,3 +94,16 @@ export const slugifyString = (string: string, delimiter = '-') =>
  */
 export const unSlugifyString = (string: string, delimiter = '-') =>
 	string.split(delimiter).join(' ');
+
+/**
+ * Capitalize the first letter of a sentence
+ * @param sentence - The sentence to capitalize
+ * @returns The capitalized sentence
+ * @example capitalizeSentence('hello, world!') // 'Hello, World!'
+ */
+export const capitalizeSentence = (sentence: string) => {
+	return sentence
+		.split(' ')
+		.map((word) => `${word[0].toUpperCase()}${word.slice(1)}`)
+		.join(' ');
+};

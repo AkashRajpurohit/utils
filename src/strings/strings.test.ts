@@ -7,6 +7,7 @@ import {
 	stripHtml,
 	slugifyString,
 	unSlugifyString,
+	capitalizeSentence,
 } from './strings';
 
 describe('stripHtml', () => {
@@ -109,5 +110,12 @@ describe('unSlugifyString', () => {
 	it('should unslugify a string', () => {
 		expect(unSlugifyString('Hello-world')).toEqual('Hello world');
 		expect(unSlugifyString('Hello_world', '_')).toEqual('Hello world');
+	});
+});
+
+describe('capitalizeSentence', () => {
+	it('should capitalize the first letter of a sentence', () => {
+		expect(capitalizeSentence('hello world')).toEqual('Hello World');
+		expect(capitalizeSentence('hello world.')).toEqual('Hello World.');
 	});
 });
