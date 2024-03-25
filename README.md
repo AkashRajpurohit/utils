@@ -26,6 +26,8 @@
     <a href="https://github.com/AkashRajpurohit/utils/issues/new?template=bug_report.md">Bug report</a>
     ·
     <a href="https://github.com/AkashRajpurohit/utils/issues/new?template=feature_request.md">Feature request</a>
+    ·
+    <a href="https://akashrajpurohit.github.io/utils/">Read Docs</a>
   </p>
 </p>
 <br />
