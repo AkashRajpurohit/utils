@@ -2,8 +2,8 @@
 <h3 align="center">Common utility functions for JavaScript and TypeScript</h3>
 <br />
 <p align="center">
-  <a href="https://github.com/AkashRajpurohit/utils/actions/workflows/ci.yml">
-    <img alt="Build states" src="https://github.com/AkashRajpurohit/utils/actions/workflows/ci.yml/badge.svg?branch=main">
+  <a href="https://github.com/AkashRajpurohit/utils/actions/workflows/release.yml">
+    <img alt="Build states" src="https://github.com/AkashRajpurohit/utils/actions/workflows/release.yml/badge.svg?branch=main">
   </a>
   <a href="https://www.npmjs.com/package/@akashrajpurohit/utils">
     <img alt="npm latest version" src="https://img.shields.io/npm/v/@akashrajpurohit/utils/latest.svg">
