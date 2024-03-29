@@ -55,6 +55,10 @@ const formattedDate = formatDate(date, 'full');
 console.log(formattedDate); // Sunday, October 10, 2021
 ```
 
+## Contributing 🫱🏻‍🫲🏼
+
+Follow the [contribution guidelines](./CONTRIBUTING.md) to contribute to this project.
+
 ## Bugs or Requests 🐛
 
 If you encounter any problems feel free to open an [issue](https://github.com/AkashRajpurohit/utils/issues/new?template=bug_report.yml). If you feel the project is missing a feature, please raise a [ticket](https://github.com/AkashRajpurohit/utils/issues/new?template=feature_request.yml) on GitHub and I'll look into it. Pull requests are also welcome.
