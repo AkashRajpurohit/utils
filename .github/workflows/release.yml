@@ -1,18 +1,23 @@
-name: CI ⚙️
+name: Release 🚀
 
 on:
   push:
+    branches:
+      - main
   workflow_dispatch:
 
 permissions:
   pull-requests: write
+  contents: write
+  issues: write
+  id-token: write
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
-  cancel-in-progress: true
 
 jobs:
-  test:
+  release:
+    if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' && !contains(github.event.head_commit.message, '[skip ci]')}}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout 🧳
@@ -50,28 +55,19 @@ jobs:
       - name: Test 🔫
         run: pnpm run test:coverage
 
-      - name: Report Coverage 📝
-        if: always() # Also generate the report if tests are failing
-        uses: davelosert/vitest-coverage-report-action@v2
+      - name: Build ⏰
+        run: pnpm build
+        env:
+          NODE_ENV: production
 
-      - name: Get Coverage for badge 🔢
-        run: |
-          COVERAGE="$(cat coverage/coverage-summary.json | jq -r '.total.lines.pct')"
-          echo "COVERAGE=$(echo ${COVERAGE})" >> $GITHUB_ENV
-
-      - name: Create coverage badge ✍🏽
-        uses: schneegans/dynamic-badges-action@v1.7.0
+      - name: Release 🚀
+        id: changesets
+        uses: changesets/action@v1
         with:
-          auth: ${{ secrets.GIST_SECRET }}
-          gistID: 8c8abd593f06bf9ea44d597b6208506c
-          filename: utils-coverage.json
-          label: Code Coverage
-          message: ${{ env.COVERAGE }}
-          color: green
-          namedLogo: vitest
-
-      - name: Upload Test Results ⏫
-        uses: actions/upload-artifact@v4
-        with:
-          name: coverage
-          path: coverage/
+          version: pnpm changeset version
+          publish: pnpm changeset publish
+          commit: 'ci: :package: release'
+          title: 'ci: :package: release'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
