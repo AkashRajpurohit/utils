@@ -19,7 +19,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Setup PNPM ⚙️
-        uses: AkashRajpurohit/.github/.github/workflows/setup-pnpm@main
+        uses: ./.github/actions/setup-pnpm@main
         with:
           node_version: 20
           pnpm_version: 8
