@@ -107,3 +107,18 @@ export const capitalizeSentence = (sentence: string) => {
 		.map((word) => `${word[0].toUpperCase()}${word.slice(1)}`)
 		.join(' ');
 };
+
+/**
+ * Mask a string with a specified character
+ * @param string - The string to mask
+ * @param maskLength - The length of the string to mask
+ * @param mask - The character to use for masking. Default is '*'
+ * @returns The masked string
+ * @example maskString('1234567890', 6) // '******7890'
+ * @example maskString('1234567890', 6, 'x') // 'xxxxxx7890'
+ * @example maskString('12345', 6) // '*****'
+ */
+export const maskString = (string: string, maskLength: number, mask = '*') => {
+	const masked = string.slice(-maskLength);
+	return mask.repeat(masked.length) + string.slice(masked.length);
+};

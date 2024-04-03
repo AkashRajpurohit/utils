@@ -8,6 +8,7 @@ import {
 	slugifyString,
 	unSlugifyString,
 	capitalizeSentence,
+	maskString,
 } from './strings';
 
 describe('stripHtml', () => {
@@ -117,5 +118,13 @@ describe('capitalizeSentence', () => {
 	it('should capitalize the first letter of a sentence', () => {
 		expect(capitalizeSentence('hello world')).toEqual('Hello World');
 		expect(capitalizeSentence('hello world.')).toEqual('Hello World.');
+	});
+});
+
+describe('maskString', () => {
+	it('should mask a string with asterisks', () => {
+		expect(maskString('1234567890', 6)).toEqual('******7890');
+		expect(maskString('1234567890', 6, 'x')).toEqual('xxxxxx7890');
+		expect(maskString('12345', 6)).toEqual('*****');
 	});
 });
