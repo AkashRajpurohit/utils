@@ -1,14 +1,14 @@
 import { describe, expect, it } from 'vitest';
 
 import {
+	capitalizeSentence,
 	convertNewlines,
 	getInitials,
 	getTruncatedContent,
-	stripHtml,
-	slugifyString,
-	unSlugifyString,
-	capitalizeSentence,
 	maskString,
+	slugifyString,
+	stripHtml,
+	unSlugifyString,
 } from './strings';
 
 describe('stripHtml', () => {

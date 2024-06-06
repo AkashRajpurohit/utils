@@ -1,11 +1,11 @@
 import { describe, expect, it } from 'vitest';
 
 import {
-	rangeArray,
-	splitArrayChunks,
-	shuffleArray,
 	arrayDifference,
 	arrayIntersection,
+	rangeArray,
+	shuffleArray,
+	splitArrayChunks,
 } from './arrays';
 
 describe('rangeArray', () => {

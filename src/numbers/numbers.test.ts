@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 
-import { getRandomNumber, parseNumericValue, formatNumber } from './numbers';
+import { formatNumber, getRandomNumber, parseNumericValue } from './numbers';
 
 describe('parseNumericValue', () => {
 	it('parses a string into a number', () => {
