@@ -1,5 +1,15 @@
 # @akashrajpurohit/utils
 
+## 2.4.1
+
+### Patch Changes
+
+- [`656e3c4`](https://github.com/AkashRajpurohit/utils/commit/656e3c45655aa7400deb5f44052449360dc5b4f7) Thanks [@AkashRajpurohit](https://github.com/AkashRajpurohit)! - chore: :lipstick: format test files
+
+- [`6d09921`](https://github.com/AkashRajpurohit/utils/commit/6d099210c775294a675758e1769e07236f98d1a4) Thanks [@AkashRajpurohit](https://github.com/AkashRajpurohit)! - build(deps): :arrow_up: dependencies upgraded
+
+- [`115bd1d`](https://github.com/AkashRajpurohit/utils/commit/115bd1de1691cc1ea7b200319ba5ff074330129c) Thanks [@AkashRajpurohit](https://github.com/AkashRajpurohit)! - chore: :truck: fix trailing comma deprecation warning for biome.json
+
 ## 2.4.0
 
 ### Minor Changes
