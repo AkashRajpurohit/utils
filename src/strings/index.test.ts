@@ -9,7 +9,7 @@ import {
 	slugifyString,
 	stripHtml,
 	unSlugifyString,
-} from './strings';
+} from '.';
 
 describe('stripHtml', () => {
 	it('strips html tags from a string', () => {

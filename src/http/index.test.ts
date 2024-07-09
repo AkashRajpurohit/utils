@@ -7,7 +7,7 @@ import {
 	isValidHTTPUrl,
 	removeHttp,
 	removeTrailingSlash,
-} from './http';
+} from '.';
 
 describe('addHttp', () => {
 	it('adds https protocol to url', () => {

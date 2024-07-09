@@ -6,7 +6,7 @@ import {
 	rangeArray,
 	shuffleArray,
 	splitArrayChunks,
-} from './arrays';
+} from '.';
 
 describe('rangeArray', () => {
 	it('generates an array of numbers', () => {

@@ -1,11 +1,6 @@
 import { describe, expect, it } from 'vitest';
 
-import {
-	isEmptyObject,
-	mapObjectValues,
-	sortObject,
-	sortObjectKeys,
-} from './objects';
+import { isEmptyObject, mapObjectValues, sortObject, sortObjectKeys } from '.';
 
 describe('isEmptyObject', () => {
 	it('returns true for an empty object', () => {

@@ -8,7 +8,7 @@ import {
 	getReadTime,
 	isDateAfter,
 	isDateBefore,
-} from './time';
+} from '.';
 
 const timestamp = '2024-01-01 00:00:00.000';
 
