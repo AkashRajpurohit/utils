@@ -1,5 +1,11 @@
 # @akashrajpurohit/utils
 
+## 2.5.0
+
+### Minor Changes
+
+- [`bc79a14`](https://github.com/AkashRajpurohit/utils/commit/bc79a14216d4d032225f23279fd6e842ec7de452) Thanks [@AkashRajpurohit](https://github.com/AkashRajpurohit)! - feat: :sparkles: prepare for tree-shaking package
+
 ## 2.4.1
 
 ### Patch Changes
