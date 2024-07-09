@@ -1,5 +1,13 @@
 # @akashrajpurohit/utils
 
+## 2.5.1
+
+### Patch Changes
+
+- [`4159aa9`](https://github.com/AkashRajpurohit/utils/commit/4159aa980e72e176dcd2f9f55b1e8f7b92b26bc0) Thanks [@AkashRajpurohit](https://github.com/AkashRajpurohit)! - chore: :wrench: update package.json exports for tree-shaking support
+
+- [`9a8768b`](https://github.com/AkashRajpurohit/utils/commit/9a8768bfe62c411977c2d6012ef0522650c4e1d6) Thanks [@AkashRajpurohit](https://github.com/AkashRajpurohit)! - chore: :wrench: exclude bundling test files
+
 ## 2.5.0
 
 ### Minor Changes
