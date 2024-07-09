@@ -32,6 +32,66 @@
         "default": "./dist/index.js"
       }
     },
+    "./arrays": {
+      "import": {
+        "types": "./dist/arrays/index.d.mts",
+        "default": "./dist/arrays/index.mjs"
+      },
+      "require": {
+        "types": "./dist/arrays/index.d.ts",
+        "default": "./dist/arrays/index.js"
+      }
+    },
+    "./http": {
+      "import": {
+        "types": "./dist/http/index.d.mts",
+        "default": "./dist/http/index.mjs"
+      },
+      "require": {
+        "types": "./dist/http/index.d.ts",
+        "default": "./dist/http/index.js"
+      }
+    },
+    "./numbers": {
+      "import": {
+        "types": "./dist/numbers/index.d.mts",
+        "default": "./dist/numbers/index.mjs"
+      },
+      "require": {
+        "types": "./dist/numbers/index.d.ts",
+        "default": "./dist/numbers/index.js"
+      }
+    },
+    "./objects": {
+      "import": {
+        "types": "./dist/objects/index.d.mts",
+        "default": "./dist/objects/index.mjs"
+      },
+      "require": {
+        "types": "./dist/objects/index.d.ts",
+        "default": "./dist/objects/index.js"
+      }
+    },
+    "./strings": {
+      "import": {
+        "types": "./dist/strings/index.d.mts",
+        "default": "./dist/strings/index.mjs"
+      },
+      "require": {
+        "types": "./dist/strings/index.d.ts",
+        "default": "./dist/strings/index.js"
+      }
+    },
+    "./time": {
+      "import": {
+        "types": "./dist/time/index.d.mts",
+        "default": "./dist/time/index.mjs"
+      },
+      "require": {
+        "types": "./dist/time/index.d.ts",
+        "default": "./dist/time/index.js"
+      }
+    },
     "./package.json": "./package.json"
   },
   "typesVersions": {

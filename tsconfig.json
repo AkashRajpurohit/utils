@@ -4,6 +4,7 @@
     "esModuleInterop": true,
     "lib": ["ESNext", "DOM"],
     "module": "ESNext",
+    "outDir": "dist",
     "moduleResolution": "Bundler",
     "noImplicitReturns": true,
     "noUnusedLocals": true,
@@ -16,6 +17,6 @@
     "strict": true,
     "target": "ESNext"
   },
-  "include": ["./src/**/*.ts", "./tests/**/*.test.ts"],
+  "include": ["./src/**/*.ts"],
   "exclude": ["node_modules", "dist"]
 }
