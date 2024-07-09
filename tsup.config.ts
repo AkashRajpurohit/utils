@@ -5,9 +5,7 @@ const isProduction = process.env.NODE_ENV === 'production';
 export default defineConfig(({ watch = false }) => ({
   clean: true,
   dts: true,
-  entry: {
-    index: 'src/index.ts',
-  },
+  entry: ["src/**/*.ts"],
   external: [],
   format: ['cjs', 'esm'],
   treeshake: isProduction,
