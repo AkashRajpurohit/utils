@@ -1,5 +1,15 @@
 # @akashrajpurohit/utils
 
+## 2.6.0
+
+### Minor Changes
+
+- [`9d63135`](https://github.com/AkashRajpurohit/utils/commit/9d63135bf5439467e9a7daf6b791d12db9462556) Thanks [@AkashRajpurohit](https://github.com/AkashRajpurohit)! - feat: :sparkles: add individual submodule exports
+
+### Patch Changes
+
+- [`8b670bf`](https://github.com/AkashRajpurohit/utils/commit/8b670bf32354870dbc25ce36efe15c7ff740ade7) Thanks [@AkashRajpurohit](https://github.com/AkashRajpurohit)! - build(deps): :arrow_up: packages bumped up
+
 ## 2.5.1
 
 ### Patch Changes
