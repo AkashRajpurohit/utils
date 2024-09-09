@@ -9,6 +9,7 @@ import {
 	slugifyString,
 	stripHtml,
 	unSlugifyString,
+	isValidEmail,
 } from '.';
 
 describe('stripHtml', () => {
@@ -126,5 +127,15 @@ describe('maskString', () => {
 		expect(maskString('1234567890', 6)).toEqual('******7890');
 		expect(maskString('1234567890', 6, 'x')).toEqual('xxxxxx7890');
 		expect(maskString('12345', 6)).toEqual('*****');
+	});
+});
+
+describe('isValidEmail', () => {
+	it('should return true for valid email addresses', () => {
+		expect(isValidEmail('akash@gmail.com')).toEqual(true);
+	});
+
+	it('should return false for invalid email addresses', () => {
+		expect(isValidEmail('sadsa')).toEqual(false);
 	});
 });

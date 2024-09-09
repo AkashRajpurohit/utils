@@ -122,3 +122,15 @@ export const maskString = (string: string, maskLength: number, mask = '*') => {
 	const masked = string.slice(-maskLength);
 	return mask.repeat(masked.length) + string.slice(masked.length);
 };
+
+/**
+ * Checks if a string is a valid email
+ * @param email - The email to validate
+ * @returns Boolean indicating if the email is valid
+ * @example isValidEmail('sadsa') // false
+ * @example isValidEmail('akash@gmail.com') // true
+ */
+export const isValidEmail = (email: string) => {
+	const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+	return emailRegex.test(email);
+};
