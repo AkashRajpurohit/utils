@@ -1,5 +1,13 @@
 # @akashrajpurohit/utils
 
+## 2.6.1
+
+### Patch Changes
+
+- [`e16ff4a`](https://github.com/AkashRajpurohit/utils/commit/e16ff4a2189936c1380d21596aa9e86a00105aed) Thanks [@AkashRajpurohit](https://github.com/AkashRajpurohit)! - feat: :sparkles: is valid email added
+
+- [`c7dc4bc`](https://github.com/AkashRajpurohit/utils/commit/c7dc4bce8cb7c0e1de4fc027a8cf0bac09efd5ee) Thanks [@AkashRajpurohit](https://github.com/AkashRajpurohit)! - build(deps): :arrow_up: deps bumped up"
+
 ## 2.6.0
 
 ### Minor Changes
