@@ -1,5 +1,17 @@
 # @akashrajpurohit/utils
 
+## 2.7.0
+
+### Minor Changes
+
+- [`baa533d`](https://github.com/AkashRajpurohit/utils/commit/baa533d2d3822b13ebab2e0022c18bb2f9448779) Thanks [@AkashRajpurohit](https://github.com/AkashRajpurohit)! - feat: :sparkles: mask string reverse i.e from end
+
+### Patch Changes
+
+- [`c9868a3`](https://github.com/AkashRajpurohit/utils/commit/c9868a389411c29d4e9e5c1a50c69a8604e24cd4) Thanks [@AkashRajpurohit](https://github.com/AkashRajpurohit)! - chore: :broom: format
+
+- [`b59fb97`](https://github.com/AkashRajpurohit/utils/commit/b59fb97458937621e39dd6c44060376eb8fc7575) Thanks [@AkashRajpurohit](https://github.com/AkashRajpurohit)! - build(deps): :arrow_up: upgrade deps
+
 ## 2.6.1
 
 ### Patch Changes
