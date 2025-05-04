@@ -9,7 +9,7 @@
  * @example stripHtml('<p>Hello, world!</p>') // 'Hello, world!'
  */
 export const stripHtml = (string: string) => {
-	return string.replace(/<[^>]*>?/gm, '');
+  return string.replace(/<[^>]*>?/gm, '');
 };
 
 /**
@@ -20,7 +20,7 @@ export const stripHtml = (string: string) => {
  * @example convertNewlines('Hello\nworld!') // 'Hello world!'
  */
 export const convertNewlines = (string: string, replacement = ' ') => {
-	return string.replace(/\n+/g, replacement);
+  return string.replace(/\n+/g, replacement);
 };
 
 /**
@@ -31,21 +31,21 @@ export const convertNewlines = (string: string, replacement = ' ') => {
  * @example getTruncatedContent('This is a long string', 10) // 'This is a...'
  */
 export const getTruncatedContent = (
-	content: string | undefined | null,
-	length = 250,
+  content: string | undefined | null,
+  length = 250,
 ) => {
-	if (!content) {
-		return null;
-	}
+  if (!content) {
+    return null;
+  }
 
-	const plainText = convertNewlines(stripHtml(content));
-	const text = plainText.slice(0, length).trim();
+  const plainText = convertNewlines(stripHtml(content));
+  const text = plainText.slice(0, length).trim();
 
-	if (text.length < plainText.length) {
-		return `${text}...`;
-	}
+  if (text.length < plainText.length) {
+    return `${text}...`;
+  }
 
-	return text;
+  return text;
 };
 
 /**
@@ -56,21 +56,21 @@ export const getTruncatedContent = (
  * @example getInitials('John Doe') // 'JD'
  */
 export const getInitials = (value?: string | null, limit = 0) => {
-	const val = (value || '').trim();
+  const val = (value || '').trim();
 
-	// If the value is empty, a single character, or two characters (already initials)
-	if (val.length === 0 || val.length === 1 || val.length === 2) {
-		return val.toUpperCase();
-	}
+  // If the value is empty, a single character, or two characters (already initials)
+  if (val.length === 0 || val.length === 1 || val.length === 2) {
+    return val.toUpperCase();
+  }
 
-	const values = val.split(' ').filter(Boolean);
-	const initials = values.map((name) => name.charAt(0).toUpperCase()).join('');
+  const values = val.split(' ').filter(Boolean);
+  const initials = values.map((name) => name.charAt(0).toUpperCase()).join('');
 
-	if (limit > 0) {
-		return initials.slice(0, limit);
-	}
+  if (limit > 0) {
+    return initials.slice(0, limit);
+  }
 
-	return initials;
+  return initials;
 };
 
 /**
@@ -82,7 +82,7 @@ export const getInitials = (value?: string | null, limit = 0) => {
  * @example slugifyString('Hello world', '_') // 'Hello_world'
  */
 export const slugifyString = (string: string, delimiter = '-') =>
-	string.split(' ').join(delimiter);
+  string.split(' ').join(delimiter);
 
 /**
  * A utility function that unslugify a string
@@ -93,7 +93,7 @@ export const slugifyString = (string: string, delimiter = '-') =>
  * @example unSlugifyString('Hello_world', '_') // 'Hello world'
  */
 export const unSlugifyString = (string: string, delimiter = '-') =>
-	string.split(delimiter).join(' ');
+  string.split(delimiter).join(' ');
 
 /**
  * Capitalize the first letter of a sentence
@@ -102,10 +102,10 @@ export const unSlugifyString = (string: string, delimiter = '-') =>
  * @example capitalizeSentence('hello, world!') // 'Hello, World!'
  */
 export const capitalizeSentence = (sentence: string) => {
-	return sentence
-		.split(' ')
-		.map((word) => `${word[0].toUpperCase()}${word.slice(1)}`)
-		.join(' ');
+  return sentence
+    .split(' ')
+    .map((word) => `${word[0].toUpperCase()}${word.slice(1)}`)
+    .join(' ');
 };
 
 /**
@@ -119,8 +119,25 @@ export const capitalizeSentence = (sentence: string) => {
  * @example maskString('12345', 6) // '*****'
  */
 export const maskString = (string: string, maskLength: number, mask = '*') => {
-	const masked = string.slice(-maskLength);
-	return mask.repeat(masked.length) + string.slice(masked.length);
+  const masked = string.slice(-maskLength);
+  return mask.repeat(masked.length) + string.slice(masked.length);
+};
+
+/**
+ * Mask a string with a specified character from the end
+ * @param string - The string to mask
+ * @param maskLength - The length of the string to mask
+ * @param mask - The character to use for masking. Default is '*'
+ * @returns The masked string
+ * @example maskStringReverse('1234567890', 6) // '123456******'
+ */
+export const maskStringReverse = (
+  string: string,
+  maskLength: number,
+  mask = '*',
+) => {
+  const masked = string.slice(0, maskLength);
+  return string.slice(0, -maskLength) + mask.repeat(masked.length);
 };
 
 /**
@@ -131,6 +148,6 @@ export const maskString = (string: string, maskLength: number, mask = '*') => {
  * @example isValidEmail('akash@gmail.com') // true
  */
 export const isValidEmail = (email: string) => {
-	const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-	return emailRegex.test(email);
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return emailRegex.test(email);
 };
