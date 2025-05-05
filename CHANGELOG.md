@@ -1,5 +1,11 @@
 # @akashrajpurohit/utils
 
+## 2.8.0
+
+### Minor Changes
+
+- [`7258d78`](https://github.com/AkashRajpurohit/utils/commit/7258d788e8169be3ea2c0166cd10dfc70516d283) Thanks [@AkashRajpurohit](https://github.com/AkashRajpurohit)! - feat: :sparkles: format bytes to human-readable strings
+
 ## 2.7.0
 
 ### Minor Changes
