@@ -10,7 +10,7 @@
  * @returns A random number between the specified minimum and maximum values.
  */
 export const getRandomNumber = (min: number, max: number) => {
-	return Math.floor(Math.random() * (max - min + 1)) + min;
+  return Math.floor(Math.random() * (max - min + 1)) + min;
 };
 
 /**
@@ -19,9 +19,9 @@ export const getRandomNumber = (min: number, max: number) => {
  * @returns The parsed numeric value, or the original string if it cannot be parsed.
  */
 export const parseNumericValue = (string: string) => {
-	const number = Number.parseFloat(string);
+  const number = Number.parseFloat(string);
 
-	return Number.isNaN(number) ? string : number;
+  return Number.isNaN(number) ? string : number;
 };
 
 /**
@@ -33,8 +33,25 @@ export const parseNumericValue = (string: string) => {
  * @example formatNumber(123456.789, 'en-US') // 123,456.789
  */
 export const formatNumber = (
-	number: number,
-	locale: Intl.LocalesArgument = 'en-US',
+  number: number,
+  locale: Intl.LocalesArgument = 'en-US',
 ) => {
-	return number.toLocaleString(locale);
+  return number.toLocaleString(locale);
+};
+
+/**
+ * Formats a number of bytes into a human-readable string.
+ * @param bytes - The number of bytes to format.
+ * @param decimals - The number of decimal places to include in the result.
+ * @returns A string representing the number of bytes in a human-readable format.
+ */
+export const formatBytes = (bytes: number, decimals = 2) => {
+  if (bytes === 0) return '0 Bytes';
+  const k = 1024;
+  const dm = decimals < 0 ? 0 : decimals;
+  const sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB'];
+
+  const i = Math.floor(Math.log(bytes) / Math.log(k));
+
+  return `${Number.parseFloat((bytes / k ** i).toFixed(dm))} ${sizes[i]}`;
 };
