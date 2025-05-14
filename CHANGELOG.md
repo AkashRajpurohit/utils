@@ -1,5 +1,15 @@
 # @akashrajpurohit/utils
 
+## 2.8.1
+
+### Patch Changes
+
+- [`87b03cf`](https://github.com/AkashRajpurohit/utils/commit/87b03cf8a4c40174f6b7a53ab9a2881736847ea5) Thanks [@AkashRajpurohit](https://github.com/AkashRajpurohit)! - feat: :sparkles: add output mode of binary or decimal for formatBytes
+
+- [`032a2ea`](https://github.com/AkashRajpurohit/utils/commit/032a2ea9f52e38536cfbe46dc093f315c1bff850) Thanks [@AkashRajpurohit](https://github.com/AkashRajpurohit)! - build: :arrow_up: upgrade deps
+
+- [`59e28ed`](https://github.com/AkashRajpurohit/utils/commit/59e28ed75c5a3be6fd688a4d668f170fd44a39c3) Thanks [@AkashRajpurohit](https://github.com/AkashRajpurohit)! - chore: :arrow_up: upgrade node to 22.15.0
+
 ## 2.8.0
 
 ### Minor Changes
