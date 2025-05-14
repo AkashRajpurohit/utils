@@ -43,13 +43,17 @@ export const formatNumber = (
  * Formats a number of bytes into a human-readable string.
  * @param bytes - The number of bytes to format.
  * @param decimals - The number of decimal places to include in the result.
+ * @param output - The output format, either 'binary' or 'decimal'
  * @returns A string representing the number of bytes in a human-readable format.
  */
-export const formatBytes = (bytes: number, decimals = 2) => {
+export const formatBytes = (bytes: number, decimals = 2, output = 'binary') => {
   if (bytes === 0) return '0 Bytes';
-  const k = 1024;
+  const k = output === 'binary' ? 1024 : 1000;
   const dm = decimals < 0 ? 0 : decimals;
-  const sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB'];
+  const sizes =
+    output === 'binary'
+      ? ['Bytes', 'KiB', 'MiB', 'GiB', 'TiB', 'PiB', 'EiB', 'ZiB', 'YiB']
+      : ['Bytes', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB'];
 
   const i = Math.floor(Math.log(bytes) / Math.log(k));
 
